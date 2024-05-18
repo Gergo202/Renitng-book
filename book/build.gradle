@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+jacoco {
+    toolVersion = "0.8.7"
+}
+
+test {
+    jacoco {
+        append = false
+    }
+}
+
+jacocoTestReport {
+    dependsOn(test)
+}
