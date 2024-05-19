@@ -51,10 +51,13 @@ public class BookServiceImplTest {
         when(bookRepository.findAll()).
                 thenReturn(Arrays.asList(book1, book2));
 
-        List<BookEntity> books =
+        List<BookEntity> book1 =
+                bookService.getAllBooks();
+        List<BookEntity> book2 =
                 bookService.getAllBooks();
 
-        assertEquals(2, books.size());
+        assertEquals(2, book1.size());
+        assertEquals(2, book2.size());
         verify(bookRepository, times(2)).findAll();
     }
 
