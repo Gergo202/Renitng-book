@@ -15,6 +15,7 @@
         <th>Place</th>
         <th>Name</th>
         <th>Return Date</th>
+        <th>Actions</th>
     </tr>
     <tr th:each="book : ${books}">
         <td th:text="${book.id}"></td>
@@ -25,6 +26,7 @@
         <td th:text="${#dates.format(book.returnDate, 'yyyy-MM-dd')}"></td>
     </tr>
 </table>
+
 <a th:href="@{/books}">Back to All Books</a>
 </body>
 </html>
