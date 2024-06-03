@@ -8,7 +8,7 @@ on:
 jobs:
   build:
 
-    runs-on: window-2022
+    runs-on: window-latest
 
     steps:
       - name: Check out repository
