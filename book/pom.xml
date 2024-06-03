@@ -94,6 +94,8 @@
 						<exclude>**/service/BookService.java</exclude>
 						<exclude>**/controller/BookController.java</exclude>
 					</excludes>
+					<parallel>methods</parallel>
+					<threadCount>2</threadCount>
 				</configuration>
 			</plugin>
 
